@@ -1,0 +1,20 @@
+relationship 12d4ea85-867c-8428-1d19-dde2508c8e3a
+	fromColumn: Global_Supply_Chain_Risk_2026.Date
+	toColumn: 'DimDate csv'.Date
+
+relationship a17da91f-e260-f523-2f80-61ba9db1d815
+	fromColumn: Global_Supply_Chain_Risk_2026.Origin_Port
+	toColumn: 'DimPort csv'.PortName
+
+relationship 55b60a17-d247-06fe-3c20-2c78dd339ba4
+	fromColumn: Global_Supply_Chain_Risk_2026.Transport_Mode
+	toColumn: 'DimTransportMode csv'.Transport_Mode
+
+relationship aaa351a7-06ac-84fe-210b-1d907fcf2984
+	fromColumn: Global_Supply_Chain_Risk_2026.Product_Category
+	toColumn: 'DimProductCategory csv'.Product_Category
+
+relationship 0837a08c-cb16-2101-c8cf-7a921799b677
+	fromColumn: Global_Supply_Chain_Risk_2026.Weather_Condition
+	toColumn: 'DimWeatherCondition csv'.Weather_Condition
+
