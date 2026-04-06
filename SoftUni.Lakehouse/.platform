@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Lakehouse",
+    "displayName": "SoftUni"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "a64e775c-32e4-9e62-4653-04727ed5a142"
+  }
+}

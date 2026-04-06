@@ -1,0 +1,39 @@
+table 'DimProductCategory csv'
+	lineageTag: 239e48e3-155a-4f7e-8241-155d3b086487
+	sourceLineageTag: [dbo].[DimProductCategory csv]
+
+	column ProductCategoryKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 36df95ef-45ac-4c52-8ec1-b6aa91cd157d
+		sourceLineageTag: ProductCategoryKey
+		summarizeBy: none
+		sourceColumn: ProductCategoryKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column Product_Category
+		dataType: string
+		lineageTag: f7b82c76-96c2-47c4-9789-73f0ccdc83e9
+		sourceLineageTag: Product_Category
+		summarizeBy: none
+		sourceColumn: Product_Category
+
+		annotation SummarizationSetBy = Automatic
+
+	column CategoryGroup
+		dataType: string
+		lineageTag: 5554f785-f486-48ad-b1c2-6b01a25860c9
+		sourceLineageTag: CategoryGroup
+		summarizeBy: none
+		sourceColumn: CategoryGroup
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'DimProductCategory csv' = entity
+		mode: directLake
+		source
+			entityName: DimProductCategory csv
+			schemaName: dbo
+			expressionSource: 'DirectLake - SoftUni'
+

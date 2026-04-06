@@ -1,0 +1,60 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {
+    "allowModernEvaluationEngine": true
+  },
+  "name": "SoftUni Dataflow",
+  "queryGroups": [],
+  "documentLocale": "en-US",
+  "queriesMetadata": {
+    "Global_Supply_Chain_Risk_2026": {
+      "queryId": "0c3d27ef-cbf6-4683-ad96-623ffe52a3cc",
+      "queryName": "Global_Supply_Chain_Risk_2026",
+      "loadEnabled": false
+    },
+    "Global_Supply_Chain_Risk_2026_DataDestination": {
+      "queryId": "c829e85c-815f-4746-9e6f-d6d4715b01bc",
+      "queryName": "Global_Supply_Chain_Risk_2026_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "DefaultDestination": {
+      "queryId": "b4252df7-a772-4cbb-9579-6bdda5db8533",
+      "queryName": "DefaultDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "DimDate csv": {
+      "queryId": "080a25df-c1b0-4662-81a0-fd98dfd510ca",
+      "queryName": "DimDate csv",
+      "loadEnabled": false
+    },
+    "DimPort csv": {
+      "queryId": "8a50c182-a47a-4131-8bbb-ec70f08841ea",
+      "queryName": "DimPort csv",
+      "loadEnabled": false
+    },
+    "DimProductCategory csv": {
+      "queryId": "d858a4c4-2ba7-4b4c-a3c1-2bc15469dd0e",
+      "queryName": "DimProductCategory csv",
+      "loadEnabled": false
+    },
+    "DimTransportMode csv": {
+      "queryId": "7cba8e32-9d5f-4810-8ebf-16ec5cfefba7",
+      "queryName": "DimTransportMode csv",
+      "loadEnabled": false
+    },
+    "DimWeatherCondition csv": {
+      "queryId": "32bc0f61-9f5c-448f-bdf6-dc5e348a08e7",
+      "queryName": "DimWeatherCondition csv",
+      "loadEnabled": false
+    }
+  },
+  "connections": [
+    {
+      "path": "Lakehouse",
+      "kind": "Lakehouse",
+      "connectionId": "{\"ClusterId\":\"0e300d76-e1b0-4a9e-a1be-d3edc1962e1f\",\"DatasourceId\":\"12967a2e-09ec-401e-a061-1371d7dbbee2\"}"
+    }
+  ]
+}
