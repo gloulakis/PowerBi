@@ -1,0 +1,9 @@
+expression 'DirectLake - SoftUni' =
+		let
+		    Source = AzureStorage.DataLake("https://onelake.dfs.fabric.microsoft.com/f96795bf-9182-428e-abca-0c9159674f2d/7ed5a142-0472-4653-9e62-32e4a64e775c", [HierarchicalNavigation=true])
+		in
+		    Source
+	lineageTag: 7ecbcdf1-c05e-42ae-91a8-28f3df77e5a1
+
+	annotation PBI_IncludeFutureArtifacts = False
+

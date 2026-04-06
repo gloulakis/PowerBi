@@ -1,0 +1,39 @@
+table 'DimWeatherCondition csv'
+	lineageTag: 4366d4ae-c281-417b-9b5e-bdd337cbe492
+	sourceLineageTag: [dbo].[DimWeatherCondition csv]
+
+	column WeatherKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 36890d68-8305-430d-8128-69f9c3a9ebf8
+		sourceLineageTag: WeatherKey
+		summarizeBy: none
+		sourceColumn: WeatherKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column Weather_Condition
+		dataType: string
+		lineageTag: 48d2deb5-9132-4e3c-96b2-e2d0918944e2
+		sourceLineageTag: Weather_Condition
+		summarizeBy: none
+		sourceColumn: Weather_Condition
+
+		annotation SummarizationSetBy = Automatic
+
+	column WeatherSeverity
+		dataType: string
+		lineageTag: 0774ee1e-e890-4204-b794-bb89b24b2753
+		sourceLineageTag: WeatherSeverity
+		summarizeBy: none
+		sourceColumn: WeatherSeverity
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'DimWeatherCondition csv' = entity
+		mode: directLake
+		source
+			entityName: DimWeatherCondition csv
+			schemaName: dbo
+			expressionSource: 'DirectLake - SoftUni'
+
