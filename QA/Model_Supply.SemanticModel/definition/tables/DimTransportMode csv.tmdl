@@ -1,0 +1,39 @@
+table 'DimTransportMode csv'
+	lineageTag: d7951f60-ac49-4257-8a19-3a3bd5374954
+	sourceLineageTag: [dbo].[DimTransportMode csv]
+
+	column TransportModeKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 236ee7f0-c1eb-433b-9358-339fa1ac5ea4
+		sourceLineageTag: TransportModeKey
+		summarizeBy: none
+		sourceColumn: TransportModeKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column Transport_Mode
+		dataType: string
+		lineageTag: 1312837a-72e6-4868-905b-6d16eba08e57
+		sourceLineageTag: Transport_Mode
+		summarizeBy: none
+		sourceColumn: Transport_Mode
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModeGroup
+		dataType: string
+		lineageTag: 420015a2-439b-4cf0-bc59-998472c3f3cc
+		sourceLineageTag: ModeGroup
+		summarizeBy: none
+		sourceColumn: ModeGroup
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'DimTransportMode csv' = entity
+		mode: directLake
+		source
+			entityName: DimTransportMode csv
+			schemaName: dbo
+			expressionSource: 'DirectLake - SoftUni'
+
