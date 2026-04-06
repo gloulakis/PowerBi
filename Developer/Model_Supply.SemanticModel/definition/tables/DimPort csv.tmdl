@@ -1,0 +1,39 @@
+table 'DimPort csv'
+	lineageTag: 22ff204d-1da9-400b-acd9-25a8155a2222
+	sourceLineageTag: [dbo].[DimPort csv]
+
+	column PortKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 5055e8d6-dac0-4667-bd08-e4d47b0d99d6
+		sourceLineageTag: PortKey
+		summarizeBy: none
+		sourceColumn: PortKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column PortName
+		dataType: string
+		lineageTag: cafcc51e-0abc-4f48-b65c-a4f0f452d4cf
+		sourceLineageTag: PortName
+		summarizeBy: none
+		sourceColumn: PortName
+
+		annotation SummarizationSetBy = Automatic
+
+	column PortRegion
+		dataType: string
+		lineageTag: c467c676-856b-4e89-b783-b0026ad7dfc5
+		sourceLineageTag: PortRegion
+		summarizeBy: none
+		sourceColumn: PortRegion
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'DimPort csv' = entity
+		mode: directLake
+		source
+			entityName: DimPort csv
+			schemaName: dbo
+			expressionSource: 'DirectLake - SoftUni'
+

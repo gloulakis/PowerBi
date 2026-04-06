@@ -1,0 +1,151 @@
+table Global_Supply_Chain_Risk_2026
+	lineageTag: cb38f05c-e469-4eaf-9ee8-fce3fa36e700
+	sourceLineageTag: [dbo].[Global_Supply_Chain_Risk_2026]
+
+	column Shipment_ID
+		dataType: string
+		lineageTag: 9378bf65-9e8f-4a65-8da5-d539b7bb7003
+		sourceLineageTag: Shipment_ID
+		summarizeBy: none
+		sourceColumn: Shipment_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 4bd950cb-42e3-432f-8f23-fe8be245559e
+		sourceLineageTag: Date
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column Origin_Port
+		dataType: string
+		lineageTag: 9b879174-8f7d-4667-9431-4aa622df97ba
+		sourceLineageTag: Origin_Port
+		summarizeBy: none
+		sourceColumn: Origin_Port
+
+		annotation SummarizationSetBy = Automatic
+
+	column Destination_Port
+		dataType: string
+		lineageTag: 1b7853da-5d6e-4179-92fd-aab722b58113
+		sourceLineageTag: Destination_Port
+		summarizeBy: none
+		sourceColumn: Destination_Port
+
+		annotation SummarizationSetBy = Automatic
+
+	column Transport_Mode
+		dataType: string
+		lineageTag: e4a10fe4-1d81-4707-8850-cb2c9db597bb
+		sourceLineageTag: Transport_Mode
+		summarizeBy: none
+		sourceColumn: Transport_Mode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Product_Category
+		dataType: string
+		lineageTag: d90308b8-e3a7-4615-9cd4-49855b3d4eb6
+		sourceLineageTag: Product_Category
+		summarizeBy: none
+		sourceColumn: Product_Category
+
+		annotation SummarizationSetBy = Automatic
+
+	column Distance_km
+		dataType: double
+		lineageTag: 6464f672-54a6-4120-b6c8-437ae882d2f7
+		sourceLineageTag: Distance_km
+		summarizeBy: sum
+		sourceColumn: Distance_km
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Weight_MT
+		dataType: double
+		lineageTag: 0858fcab-08ed-4701-a313-72cf2c26cd7a
+		sourceLineageTag: Weight_MT
+		summarizeBy: sum
+		sourceColumn: Weight_MT
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Fuel_Price_Index
+		dataType: double
+		lineageTag: e6699d2b-91e7-47b4-bc86-ca25ce786c0c
+		sourceLineageTag: Fuel_Price_Index
+		summarizeBy: sum
+		sourceColumn: Fuel_Price_Index
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Geopolitical_Risk_Score
+		dataType: double
+		lineageTag: f364cc9a-1977-4253-926b-f2c342e6289f
+		sourceLineageTag: Geopolitical_Risk_Score
+		summarizeBy: sum
+		sourceColumn: Geopolitical_Risk_Score
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Weather_Condition
+		dataType: string
+		lineageTag: f4fb3751-e47b-4b25-903c-66ba3fbbb0b7
+		sourceLineageTag: Weather_Condition
+		summarizeBy: none
+		sourceColumn: Weather_Condition
+
+		annotation SummarizationSetBy = Automatic
+
+	column Carrier_Reliability_Score
+		dataType: double
+		lineageTag: a293bbbc-a480-481d-87ed-403303443c8e
+		sourceLineageTag: Carrier_Reliability_Score
+		summarizeBy: sum
+		sourceColumn: Carrier_Reliability_Score
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Lead_Time_Days
+		dataType: double
+		lineageTag: 0d169c54-fa37-4a2b-9faa-6cc6a2648ba8
+		sourceLineageTag: Lead_Time_Days
+		summarizeBy: sum
+		sourceColumn: Lead_Time_Days
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Disruption_Occurred
+		dataType: int64
+		formatString: 0
+		lineageTag: 82f930f6-c9e4-4891-bdb5-1e82c08cca92
+		sourceLineageTag: Disruption_Occurred
+		summarizeBy: sum
+		sourceColumn: Disruption_Occurred
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Global_Supply_Chain_Risk_2026 = entity
+		mode: directLake
+		source
+			entityName: Global_Supply_Chain_Risk_2026
+			schemaName: dbo
+			expressionSource: 'DirectLake - SoftUni'
+
